@@ -5,31 +5,31 @@ import { Link } from 'react-router-dom';
 
 export default function SignUpForm(e) {
   
-  return <form className='auth__form' onSubmit={e.handleSubmit}>
+  return <form className='auth__form ' onSubmit={e.handleSubmit}>
     <div className=' auth__username d-flex flex-row justify-content-between '>
       <div className='  w-100'>
-        <Field name="first_name" type="text" size='sm' className={`form-control bg-dark      shadow-lg ${e.errors.first_name && e.touched.first_name && 'is-invalid'}   ${e.values.first_name && 'is-valid'}  `} placeholder='enter your first name ' />
+        <Field name="first_name" type="text" size='sm' className={`form-control bg-dark      shadow-lg ${e.errors.first_name && e.touched.first_name && 'is-invalid'}   ${e.values.first_name && 'is-valid'} border-0 `} placeholder='enter your first name ' />
         <ErrorMessage name='first_name' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
       </div>
 
       <div className='  w-100'>
-        <Field name="last_name" type="text" size='sm' className={` ${e.errors.last_name && e.touched.last_name && 'is-invalid'}   ${e.values.last_name && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+        <Field name="last_name" type="text" size='sm' className={` ${e.errors.last_name && e.touched.last_name && 'is-invalid'}   ${e.values.last_name && 'is-valid'}  form-control d-block   bg-dark   shadow-lg border-0`} placeholder='enter your last name ' />
         <ErrorMessage name='last_name' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
       </div>
     </div>
 
     <div>
-    <Field name="age" type="number" size='sm' className={` ${e.errors.age && e.touched.age && 'is-invalid'}   ${e.values.age && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+    <Field name="age" type="number" size='sm' className={` ${e.errors.age && e.touched.age && 'is-invalid'}   ${e.values.age && 'is-valid'}  form-control d-block   bg-dark border-0   shadow-lg`} placeholder='enter your current age ' />
         <ErrorMessage name='age' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
     </div>
 
     <div>
-    <Field name="email" type="email" size='sm' className={` ${e.errors.email && e.touched.email && 'is-invalid'}   ${e.values.email && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+    <Field name="email" type="email" size='sm' className={` ${e.errors.email && e.touched.email && 'is-invalid'}   ${e.values.email && 'is-valid'}  form-control d-block   bg-dark  border-0 shadow-lg`} placeholder='enter your email ' />
         <ErrorMessage name='email' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
     </div>
 
     <div>
-    <Field name="password" type="password" size='sm' className={` ${e.errors.password && e.touched.password && 'is-invalid'}   ${e.values.password && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+    <Field name="password" type="password" size='sm' className={` ${e.errors.password && e.touched.password && 'is-invalid'}   ${e.values.password && 'is-valid'}  form-control d-block  border-0 bg-dark   shadow-lg`} placeholder='enter your password' />
         <ErrorMessage name='password' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
     </div>
 

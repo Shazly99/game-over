@@ -35,7 +35,7 @@ function SignIn() {
     <>
       <Container className="auth py-5">
         <img className='auth__logo ' src={Img.Logo} alt="" />
-        <h1 className='auth__header'>Log in to GameOver</h1>
+        <h1 className='auth__header my-3'>Log in to GameOver</h1>
         <Formik
           initialValues={{ first_name: '', last_name: '', age: '', email: '', password: '' }}
           onSubmit={values => {
@@ -47,20 +47,7 @@ function SignIn() {
         >
           {SignInForm}
         </Formik>
-  {/*       <Form className='auth__form'>
-          <Form.Control type='email' className='w-100' placeholder='Email' />
-          <Form.Control type='password' placeholder='Password' />
-          <button className="btn btn-primary btn-user btn-block w-100 py-2">Login</button>
-          <hr className='auth__divid' />
-
-          <div className="text-center d-flex flex-column">
-            <a className="small a2 cursor" onClick={() => (alert('ههه اعمل اكونت جديد'))}>Forgot Password?</a>
-            <div>
-              <span className="small">Not a member yet? </span>
-              <Link to={'/register'} className="small a2"  > Create Account </Link>
-            </div>
-          </div>
-        </Form> */}
+ 
 
       </Container>
     </>

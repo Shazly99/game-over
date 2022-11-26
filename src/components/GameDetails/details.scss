@@ -1,15 +1,18 @@
-.btn-primary {
+.details__btn-group{
 
-    // background-image: -webkit-gradient(linear, left top, left bottom, from(#358de6), color-stop(40%, #358de6), to(#2174b9));
-    background-color: #358de6 !important;
-    background-repeat: no-repeat;
-    -webkit-filter: none;
-    filter: none;
-    // font-size: 1rem !important;
-    &:hover {
-        background-image: linear-gradient(#358de6, #358de6 40%, #2174b9);
+
+    .btn-primary {
+         background-color: #358de6 !important;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none; 
+        &:hover {
+            background-image: linear-gradient(#358de6, #358de6 40%, #2174b9);
+        }
     }
 }
+
+
 
 .gameprofile_background {
     background-size: cover;

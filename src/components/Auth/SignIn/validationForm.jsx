@@ -8,21 +8,17 @@ export default function SignInForm(e) {
   console.log(e);
     return <form className='auth__form' onSubmit={e.handleSubmit}>
       <div>
-      <Field name="email" type="email" size='xl' className={` ${e.errors.email && e.touched.email && 'is-invalid'}   ${e.values.email && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+      <Field name="email" type="email" size='xl' className={` ${e.errors.email && e.touched.email && 'is-invalid'}   ${e.values.email && 'is-valid'}  py-2 form-control    bg-dark border-0   shadow-lg`} placeholder='enter your email '  />
           <ErrorMessage name='email' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
       </div>
   
       <div>
-      <Field name="password" type="password" size='xl' className={` ${e.errors.password && e.touched.password && 'is-invalid'}   ${e.values.password && 'is-valid'}  form-control d-block   bg-dark   shadow-lg`} placeholder='enter your first name ' />
+      <Field name="password" type="password" size='xl' className={` ${e.errors.password && e.touched.password && 'is-invalid'}   ${e.values.password && 'is-valid'} py-2 form-control border-0  bg-dark   shadow-lg`} placeholder='enter your password' />
           <ErrorMessage name='password' component="div" render={msg => <div className='text-danger'>{msg}</div>} />
       </div>
   
-      <button  type='submit'  className="btn btn-primary btn-user btn-block w-100 py-2">Create Account</button>
-      <div>
-        <span className='text-muted small'>This site is protected by reCAPTCHA and the Google
-          <a href="https://policies.google.com/privacy" className="text-secondary link">  Privacy Policy   </a>
-          and <a href="https://policies.google.com/terms" className="text-secondary link">Terms of Service  </a>  apply.</span>
-      </div>
+      <button  type='submit'  className="btn btn-primary btn-user btn-block w-100 py-2">Login</button>
+ 
       <hr className='auth__divid' />
   
       <div className="text-center">

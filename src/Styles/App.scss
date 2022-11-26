@@ -50,11 +50,15 @@
  }
 
  //Auth Layout 
+.auth__img__form{
 
- .auth__form {
-    background-color: $bg-dark-sm !important;
-    transition: all 5s !important;
- }
+   .auth__form {
+      background-color: $bg-dark-sm !important;
+      transition: all 2s !important;
+      border-radius: 5px !important;
+      overflow: hidden; 
+   }
+}
 
 
  .auth {
@@ -75,7 +79,7 @@
        margin-top: 10px;
        display: grid;
        gap: 20px !important;
-       width: 80% !important;
+       width: 80% !important; 
     }
 
 
@@ -104,7 +108,7 @@
        color: $text-color;
        font-size: 1.5rem;
     }
-
+    
     .auth__form {
        margin-top: 10px;
        display: grid;
@@ -128,10 +132,14 @@
        display: none !important;
     }
 
-    .auth__left {
+    .auth__right {
        width: 100% !important;
     }
-
+    .auth__img__form{ 
+       .auth__form {
+         width: 100% !important;
+       }
+    }
     .container {
        width: 100% !important;
     }
