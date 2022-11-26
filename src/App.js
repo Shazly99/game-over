@@ -73,8 +73,8 @@ function App() {
             fontFamily: ' Arial, Helvetica, sans-serif',
             textTransform: 'capitalize',
             zIndex: '9999',
-            background: '#333',
-            color: '#fff',
+            background: '#fffg',
+            color: '#333',
           },
         }}
         containerStyle={{

@@ -15,6 +15,7 @@ function Games() {
         <meta charSet="utf-8" />
         <title>Games</title>
       </Helmet>
+      
       <Component.ItemGames game={game} loading={loading} moreGame={moreGame} />
 
     </>

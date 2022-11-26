@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import Slider from "react-slick";
 
 function SliderDetails({ game }) {
-  
- 
- 
+
+
+
     const settings = {
         dots: false,
         autoplay: true,
@@ -15,13 +15,13 @@ function SliderDetails({ game }) {
     };
     return (
         <>
-         <Slider {...settings}>
-             {game?.screenshots?.map((img,index)=>(<div key={index}>
+            <Slider {...settings}>
+                {game?.screenshots?.map((img, index) => (<div key={index}>
                     <img src={img.image} className='w-100' />
                 </div>
                 ))
-                } 
-            </Slider> 
+                }
+            </Slider>
         </>
     )
 }

@@ -7,7 +7,7 @@ import Component from '../../constants/Component';
 
 function DetailsCard({ game }) {
   let { screenshots, title, freetogame_profile_url, thumbnail, description, minimum_system_requirements, developer, release_date, publisher, platform, genre } = game;
-  console.log(game);
+  // console.log(screenshots);
 
   return (
     <>
@@ -32,8 +32,13 @@ function DetailsCard({ game }) {
           <h5 className='pt-3'>About {title}</h5>
           <p className=' gameDetails__p'>{description}</p>
 
-          <h4 className='pt-3'>Minimum System Requirements</h4>
-          <Component.ListMinSystem minimum_system_requirements={minimum_system_requirements}/>
+          { minimum_system_requirements &&
+            <>
+              <h4 className='pt-3'>Minimum System Requirements</h4>
+              <Component.ListMinSystem minimum_system_requirements={minimum_system_requirements} />
+            </>
+          }
+
 
           <h4 className='mt-4 mb-3 '>{title} Screenshots</h4>
           <Component.Slider game={game} />

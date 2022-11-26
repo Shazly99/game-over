@@ -14,9 +14,7 @@ function Categories() {
   
   const moreGame = () => setNumber(number + 20);
   
-  useEffect(() => {
-
-  }, [category, number])
+ 
 
   return (
     <>

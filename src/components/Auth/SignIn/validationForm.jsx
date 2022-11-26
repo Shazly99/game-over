@@ -28,7 +28,7 @@ export default function SignInForm(e) {
     <a className='text__blue mb-2'  onClick={()=>alert('معلااااش')}>Forgot Password?</a>
       <div className="text-center">
         <span style={{fontSize:'16px'}} className="small">Not a member yet?</span>
-        <Link to={'/login'} className="small cursor text__blue"  >Create Account<Icons.ChevronR size={20}/> </Link>
+        <Link to={'/register'} className="small cursor text__blue"  >Create Account<Icons.ChevronR size={20}/> </Link>
       </div>
   </> 
   }

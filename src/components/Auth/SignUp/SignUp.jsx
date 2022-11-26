@@ -37,6 +37,8 @@ function SignUp() {
         <meta charSet="utf-8" />
         <title>Sign Up</title>
       </Helmet>
+
+      
       <Container className="auth__Up py-5">
         <h1 className='auth__header pb-2'>Create My Account!</h1>
         <Formik
