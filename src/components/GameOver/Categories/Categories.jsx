@@ -6,16 +6,17 @@ import useFetch from './../../../Hook/useFetch';
 
 
 function Categories() {
-  let { categoryGame } = useParams();
+  let { category } = useParams();
 
   const [number, setNumber] = useState(20);
 
-  let { game, loading } = useFetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${categoryGame}`, number)
+  let { game, loading } = useFetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`, number)
+  
   const moreGame = () => setNumber(number + 20);
-
+  
   useEffect(() => {
 
-  }, [categoryGame, number])
+  }, [category, number])
 
   return (
     <>

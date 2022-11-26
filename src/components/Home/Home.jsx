@@ -19,7 +19,7 @@ function Home() {
           <>
             <Component.Header />
             <Container>
-              <h3 className='home__header d-flex py-4 '> <icon.Robot />  Personalized Recommendations</h3>
+              <h2 className='home__header d-flex py-4  d-flex  gap-2'> <icon.Robot size={37} />  Personalized Recommendations</h2>
               <Row  >
                 <Component.Item game={game} />
               </Row>

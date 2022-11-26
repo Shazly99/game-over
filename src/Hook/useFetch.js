@@ -23,7 +23,7 @@ function useFetch(url, number) {
         setLoading(false)
       }, 2000);
     })
-  }, [number])
+  }, [url,number])
 
   return {
     game,
