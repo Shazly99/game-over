@@ -43,9 +43,9 @@ function App() {
         {
           path: '/games', children: [
             { path: 'all', element: <ProtectedRoutes><Component.Games /></ProtectedRoutes> },
-            { path: 'Platforms', element: <ProtectedRoutes><Component.Platforms /></ProtectedRoutes> },
-            { path: 'sort-by', element: <ProtectedRoutes><Component.GmaeSort /></ProtectedRoutes> },
-            { path: 'Categories', element: <ProtectedRoutes><Component.Categories /></ProtectedRoutes> },
+            { path: 'Platforms/:platform', element: <ProtectedRoutes><Component.Platforms /></ProtectedRoutes> },
+            { path: 'sort-by/:sortBy', element: <ProtectedRoutes><Component.GmaeSort /></ProtectedRoutes> },
+            { path: 'Categories/:category', element: <ProtectedRoutes><Component.Categories /></ProtectedRoutes> },
           ]
         },
         {path:'/gameDetails/:id',element:<ProtectedRoutes><Component.GameDetails/></ProtectedRoutes>},

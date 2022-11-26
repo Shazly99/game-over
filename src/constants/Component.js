@@ -15,10 +15,11 @@ import GmaeSort from '../components/GameOver/GmaeSort/GmaeSort';
 import Categories from '../components/GameOver/Categories/Categories';
 import AurhLayout from '../Layouts/AuthLayout';
 import AuthNav from "../components/NabBar/AuthNav.jsx";
-import AllGames from '../components/GameOver/Games/AllGames';
+import AllGames from '../components/GameOver/AllGames';
 import DetailsCard from '../components/GameDetails/DetailsCard';
 import DetailsFooter from './../components/GameDetails/DetailsFooter';
 import Slider from './../components/GameDetails/Slider';
+import ItemGames from './../components/Cards/ItemGames';
 
 
 export default {
@@ -42,6 +43,7 @@ export default {
     AllGames,
     DetailsCard,
     DetailsFooter,
-    Slider
+    Slider,
+    ItemGames
 }
 

@@ -1,7 +1,7 @@
 import React  from 'react'
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; 
-import Icons from '../../../constants/Icons'; 
+import Icons from '../../constants/Icons'; 
 
 
 function AllGames({ game }) {

@@ -5,7 +5,7 @@ import { fetchData, GameOptions } from './fetchData';
 
 function useDetails(id) {
     const [game, setGame] = useState({});
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     async function get() {
         return await fetchData(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, GameOptions);

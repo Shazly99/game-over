@@ -31,10 +31,13 @@ function DetailsCard({ game }) {
           <h1>{title}</h1>
           <h5 className='pt-3'>About {title}</h5>
           <p className=' gameDetails__p'>{description}</p>
-          <h4 className='mt-4'>Forge of Empires Screenshots</h4>
+
+          <h4 className='mt-4 mb-3 '>Forge of Empires Screenshots</h4>
           <Component.Slider game={game} />
-          <h2 className='py-5'>Additional Information</h2>
+
+          <h2 className='py-4'>Additional Information</h2>
           <Component.DetailsFooter game={game} />
+
         </Col>
       </Row>
     </>
@@ -44,16 +47,3 @@ function DetailsCard({ game }) {
 export default DetailsCard
 
 
-  // const [imageSrc, setImageSrc] = useState(screenshots.map(e=>e.image)[0])
-  // const images=()=>{
-  //   setImageSrc(screenshots.map(e=>e.image))
-  // };
-  // function ImagePath() {
-  //   let random_image=Math.floor(Math.random()* images.length)
-  //   setImageSrc(images[random_image])
-  //   console.log(imageSrc);
-  // }
-  // useEffect(() => {
-  //   // ImagePath()
-
-  // }, [imageSrc])

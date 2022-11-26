@@ -10,11 +10,14 @@ function GameDetails() {
   
   return (
     <>
-
+    {
+      loading?<Component.Loading/>:
+    
       <Container className='m-top position-relative  '>
         <div className="gameprofile_background" style={{ backgroundImage: `url(https://www.freetogame.com/g/516/pubg-1.jpg)` }} > <div class="gameprofile_gradient"></div> </div>
         <Component.DetailsCard game={game} />
       </Container>
+}
     </>
   )
 }

@@ -12,14 +12,14 @@ function DetailsFooter({ game }) {
     ]
     return (
         <div class="row mb-3">
-            {/* {
-                data.map((item, i) => (
+             {
+                data?.map((item, i) => (
                     <div key={i} class="col-6 col-md-4">
                         <span class="text-muted">{item.title}<br /></span>
                         <p>{item.dec}</p>
                     </div>
                 ))
-            } */}
+            } 
         </div>
     )
 }
