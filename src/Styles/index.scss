@@ -1,0 +1,46 @@
+@import './varibale';
+ 
+
+body{
+    background-color: $bg-dark !important; 
+    color: #aaa !important; 
+}
+.cursor{
+    cursor: pointer !important;
+}
+a{
+    text-decoration: none !important;
+}
+.m-top{
+  margin-top: 120px;
+}
+
+input{
+    color: #fff !important;
+}
+
+.text-error{
+    color: red !important;
+}
+
+.container-xxl {
+    max-width: 88% !important;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color:transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #AAAAAA;
+    border-radius: 50px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #aaaaaa8d;
+  }
+  
