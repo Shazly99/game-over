@@ -7,32 +7,37 @@ import Img from '../../../assets/Img.js';
 import SignInForm from './validationForm';
 import toast, { Toaster } from 'react-hot-toast';
 import validationSchema from './../SignIn/Schema';
+import { Helmet } from 'react-helmet';
 
 function SignIn() {
-  const [userData, setUserData] = useState(null) 
-  const [user, setUser] = useState(null) 
+  const [userData, setUserData] = useState(null)
+  const [user, setUser] = useState(null)
   let navigate = useNavigate()
 
   const userDataApi = async () => {
     if (userData) {
-      let {data}= await axios.post(`https://route-egypt-api.herokuapp.com/signin`, userData);
+      let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signin`, userData);
       if (data.message == 'success') {
-        localStorage.setItem("token", data.token); 
+        localStorage.setItem("token", data.token);
 
-        toast.success(data.message );
+        toast.success(data.message);
         navigate('/');
       } else {
-        toast.error(data.message );
+        toast.error(data.message);
       }
     }
   }
- 
- useEffect(() => {
-  userDataApi()
- }, [userData])
- 
+
+  useEffect(() => {
+    userDataApi()
+  }, [userData])
+
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Sign In</title>
+      </Helmet>
       <Container className="auth py-5">
         <img className='auth__logo ' src={Img.Logo} alt="" />
         <h1 className='auth__header my-3'>Log in to GameOver</h1>
@@ -40,14 +45,14 @@ function SignIn() {
           initialValues={{ first_name: '', last_name: '', age: '', email: '', password: '' }}
           onSubmit={values => {
             // same shape as initial values 
-            setUserData(values) 
+            setUserData(values)
             userDataApi()
           }}
           validationSchema={validationSchema}
         >
           {SignInForm}
         </Formik>
- 
+
 
       </Container>
     </>

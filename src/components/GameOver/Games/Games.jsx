@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet';
 import Component from '../../../constants/Component';
 import useFetch from './../../../Hook/useFetch';
 
@@ -10,7 +11,11 @@ function Games() {
 
   return (
     <>
-      <Component.ItemGames game={game} loading={loading} moreGame={moreGame}/>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Games</title>
+      </Helmet>
+      <Component.ItemGames game={game} loading={loading} moreGame={moreGame} />
 
     </>
   )

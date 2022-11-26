@@ -13,7 +13,7 @@ function useFetch(url, number) {
   useEffect(() => {
     get().then(data => {
       let popularity = data.slice(0, number)
-      // console.log(data);
+ 
       setGame(popularity)
       setInterval(() => {
         setLoading(false)

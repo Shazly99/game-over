@@ -39,13 +39,12 @@ function App() {
       path: '/', element: <Component.Layouts LogOut={LogOut} />, children: [
 
         { index: true, element: <ProtectedRoutes><Component.Home /></ProtectedRoutes> },
-
         {
           path: '/games', children: [
             { path: 'all', element: <ProtectedRoutes><Component.Games /></ProtectedRoutes> },
             { path: 'Platforms/:platform', element: <ProtectedRoutes><Component.Platforms /></ProtectedRoutes> },
             { path: 'sort-by/:sortBy', element: <ProtectedRoutes><Component.GmaeSort /></ProtectedRoutes> },
-            { path: 'Categories/:category', element: <ProtectedRoutes><Component.Categories /></ProtectedRoutes> },
+            { path: 'category/:categoryGame', element: <ProtectedRoutes><Component.Categories /></ProtectedRoutes> },
           ]
         },
         {path:'/gameDetails/:id',element:<ProtectedRoutes><Component.GameDetails/></ProtectedRoutes>},

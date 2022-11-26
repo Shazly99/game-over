@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Col, Row } from 'react-bootstrap';
+import { Col, ListGroup, Row } from 'react-bootstrap';
 import Icons from '../../constants/Icons';
 import './details.scss'
 import Component from '../../constants/Component';
@@ -32,7 +32,10 @@ function DetailsCard({ game }) {
           <h5 className='pt-3'>About {title}</h5>
           <p className=' gameDetails__p'>{description}</p>
 
-          <h4 className='mt-4 mb-3 '>Forge of Empires Screenshots</h4>
+          <h4 className='pt-3'>Minimum System Requirements</h4>
+          <Component.ListMinSystem minimum_system_requirements={minimum_system_requirements}/>
+
+          <h4 className='mt-4 mb-3 '>{title} Screenshots</h4>
           <Component.Slider game={game} />
 
           <h2 className='py-4'>Additional Information</h2>

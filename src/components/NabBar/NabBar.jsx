@@ -48,7 +48,7 @@ function NabBar({ LogOut }) {
               <NavDropdown title="Categories" id="collasible-nav-dropdown">
                 {
                   ["racing","sports","social","shooter","open-world","zombie","fantasy","action-rpg","action","flight","battle-royale"].map((Categories,index)=>(
-                    <NavDropdown.Item  key={index} as={Link} to={`/games/Categories/${Categories}`}>{Categories}</NavDropdown.Item>
+                    <NavDropdown.Item  key={index} as={Link} to={`/games/category/${Categories}`}>{Categories}</NavDropdown.Item>
                   ))
                 }
               </NavDropdown>

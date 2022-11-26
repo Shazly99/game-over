@@ -8,6 +8,9 @@ body{
 .cursor{
     cursor: pointer !important;
 }
+.cursor-none{
+  cursor: no-drop !important;
+}
 a{
     text-decoration: none !important;
 }

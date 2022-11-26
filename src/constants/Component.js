@@ -20,6 +20,7 @@ import DetailsCard from '../components/GameDetails/DetailsCard';
 import DetailsFooter from './../components/GameDetails/DetailsFooter';
 import Slider from './../components/GameDetails/Slider';
 import ItemGames from './../components/Cards/ItemGames';
+import ListMinSystem from './../components/GameDetails/ListMinSystem';
 
 
 export default {
@@ -44,6 +45,7 @@ export default {
     DetailsCard,
     DetailsFooter,
     Slider,
-    ItemGames
+    ItemGames,
+    ListMinSystem
 }
 

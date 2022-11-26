@@ -3,12 +3,8 @@ import Slider from "react-slick";
 
 function SliderDetails({ game }) {
   
-    console.log(game.screenshots );
-
-    useEffect(() => {
-
-    }, [])
-
+ 
+ 
     const settings = {
         dots: false,
         autoplay: true,

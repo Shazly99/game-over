@@ -7,6 +7,7 @@ import { FaRobot as Robot } from "react-icons/fa";
 import { DiWindows as Window } from "react-icons/di";
 import { AiFillPlusSquare as Plus } from "react-icons/ai"; 
 import { FaSignOutAlt as SignOut } from "react-icons/fa";
+import { BiChevronRight as ChevronR } from "react-icons/bi";
 
 export default{
     facebook,
@@ -17,5 +18,6 @@ export default{
     Robot,
     Window,
     Plus,
-    SignOut
+    SignOut,
+    ChevronR
 }

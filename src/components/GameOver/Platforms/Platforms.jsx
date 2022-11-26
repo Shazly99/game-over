@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom'
 import Component from '../../../constants/Component';
 import useFetch from './../../../Hook/useFetch';
@@ -19,6 +20,10 @@ function Platforms() {
 
   return (
     <>
+          <Helmet>
+        <meta charSet="utf-8" />
+        <title>Platforms</title>
+      </Helmet>
       <Component.ItemGames game={game} loading={loading} moreGame={moreGame} />
     </>
   )

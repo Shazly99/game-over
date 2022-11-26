@@ -57,6 +57,7 @@
       transition: all 2s !important;
       border-radius: 5px !important;
       overflow: hidden; 
+
    }
 }
 
@@ -80,24 +81,22 @@
        display: grid;
        gap: 20px !important;
        width: 80% !important; 
+ 
     }
 
 
-    .auth__divid {
-       margin: 1rem 0;
-       color: inherit;
-       border: 0;
-       border-top: 1px solid;
-       opacity: .25;
-       color: #aaa;
-    }
+
  }
 
  .btn-primary {
-    color: #fff !important;
-    background-color: #3a3f44 !important;
-    border-color: #22241d !important;
- }
+   color: #fff !important;
+   background-color: #3a3f44 !important;
+   border-color: #22241d !important; 
+   transition: all 5s !important; 
+   &:hover {
+    background-image: linear-gradient(#358de6, #358de6 40%, #2174b9);
+}
+}
 
  .auth__Up {
     @include size(100%, 100%);
@@ -114,6 +113,7 @@
        display: grid;
        gap: 15px !important;
        width: 95% !important;
+       
 
     }
 
@@ -212,3 +212,34 @@
     @include flex(flex, space-between, center, row);
     padding-bottom: 10px;
  }
+
+
+ .auth__divid {
+   margin: 1rem 0;
+   color: inherit;
+   border: 0;
+   border-top: 1px solid;
+   opacity: .25; 
+  background-color: #aaa;
+   width: 93% !important;
+   height: 1px !important;
+}
+
+@media screen and (max-width:767px) {
+   
+   .small__text{
+      font-size: 12px !important;
+      width: 100% !important;
+   }
+
+}
+
+.text__blue{
+   color:  $blue-color !important;
+   font-size: 16px !important;
+   padding-left: 10px !important; 
+}
+.list-group-item{
+   color: #aaa !important; 
+   background-color: transparent !important;
+}

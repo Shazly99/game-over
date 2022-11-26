@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Item({ game }) {
-  console.log(game);
+ 
   return (
     <>
       {
