@@ -7,7 +7,7 @@ function Item({ game }) {
   return (
     <>
       {
-        game.map((item, index) => (
+        game?.map((item, index) => (
           <Col key={index} xl={4} md={6} className="mb-4 grow">
             <div className="card overflow-hidden ">
               <Link to={`/gameDetails/${item.id}`}>

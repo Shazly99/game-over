@@ -1,15 +1,15 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Component from '../constants/Component'
-import { Toaster } from 'react-hot-toast'
+import Component from '../constants/Component' 
 
 function Layouts({LogOut}) {
   return (
-    <div>
+    <div className='position-relative'>
  
+      
       <Component.NavBar LogOut={LogOut}/>
-
       <Outlet></Outlet>
+      <Component.DetectOffline/>
     </div>
   )
 }

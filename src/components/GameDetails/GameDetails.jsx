@@ -15,7 +15,7 @@ function GameDetails() {
 
           <Container className='m-top position-relative  '>
             <div className="gameprofile_background" 
-              style={{ backgroundImage: `url(${game?.screenshots?.map(e=>  e.image)[Math.floor(Math.random()*2)]})` }} > 
+              style={{ backgroundImage: `url(${game?.screenshots?.map(e=>  e.image)[Math.floor(Math.random()*3)]})` }} > 
               <div class="gameprofile_gradient"></div> </div>
             <Component.DetailsCard game={game} />
           </Container>

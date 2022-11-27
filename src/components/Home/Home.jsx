@@ -7,7 +7,7 @@ import useFetch from '../../Hook/useFetch';
 
 function Home() {
   let { game, loading } = useFetch(`https://free-to-play-games-database.p.rapidapi.com/api/games`, 3)
-
+console.log(game);
   return (
     <>
       <Helmet>
@@ -15,7 +15,7 @@ function Home() {
         <title>Game Over</title>
       </Helmet>
       {
-        loading ? <Component.Loading /> :
+        loading?<Component.Loading /> :
           <>
             <Component.Header />
             <Container>

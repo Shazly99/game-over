@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
-import { Col, ListGroup, Row } from 'react-bootstrap';
+import React from 'react'
+import { Col, Row } from 'react-bootstrap';
 import Icons from '../../constants/Icons';
 import './details.scss'
 import Component from '../../constants/Component';
 
 
 function DetailsCard({ game }) {
-  let { screenshots, title, freetogame_profile_url, thumbnail, description, minimum_system_requirements, developer, release_date, publisher, platform, genre } = game;
-  // console.log(screenshots);
+  let {  title, freetogame_profile_url, thumbnail, description, minimum_system_requirements } = game;
+
 
   return (
     <>
       <Row >
-        <Col xl={4} className="position-relative">
+        <Col xl={4} >
           <div className='sidebar control-box'>
             <img src={thumbnail} className='w-100 rounded-2 ' />
             <div className="details__btn-group">
