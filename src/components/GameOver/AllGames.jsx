@@ -13,7 +13,7 @@ function AllGames({ game }) {
       {
         game?.map((item, index) => (
           <Col key={index} xl={3} md={6} className="mb-4 grow">
-            <div className="card overflow-hidden ">
+            <div className="card shadow-lg overflow-hidden ">
               <Link to={`/gameDetails/${item.id}`}>
                 <img src={item.thumbnail} className='w-100' />
               </Link>

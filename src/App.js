@@ -1,18 +1,23 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import Img from './assets/Img.js';
 import './Styles/App.scss';
 import Component from './constants/Component'
 import { Toaster } from 'react-hot-toast';
-import jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode'; 
+import Switch from "react-switch";
 
 
+export const ThemeContext=createContext(null)
 
 function App() {
 
   const [userData, setUserData] = useState(null);
-
+  const [theme, setTheme] = useState("light");
+  const toggleTheme=()=>{
+    setTheme((curr)=>(curr==='light'?'dark':'light'));
+  }
   function userDecode() {
     let Incode = localStorage.getItem('token');
     let decode = jwtDecode(Incode)
@@ -63,7 +68,9 @@ function App() {
   ])
 
   return (
-    <>
+    <ThemeContext.Provider value={{theme , toggleTheme}}>
+
+    <div id={theme} className='app'  >
     <Component.DetectOffline/>
       <Toaster
         position="top-center"
@@ -83,7 +90,9 @@ function App() {
         }}
       />
       <RouterProvider router={root} />
-    </>
+     
+    </div>
+    </ThemeContext.Provider>
   );
 }
 

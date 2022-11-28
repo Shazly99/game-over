@@ -8,7 +8,7 @@ function Item({ game }) {
     <>
       {
         game?.map((item, index) => (
-          <Col key={index} xl={4} md={6} className="mb-4 grow">
+          <Col key={index} xl={4} md={6} className="pb-4 grow">
             <div className="card overflow-hidden ">
               <Link to={`/gameDetails/${item.id}`}>
                 <img src={item.thumbnail} className='w-100' />

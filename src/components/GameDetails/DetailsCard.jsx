@@ -11,7 +11,7 @@ function DetailsCard({ game }) {
 
   return (
     <>
-      <Row >
+      <Row  style={{zIndex:'9999'}}>
         <Col xl={4} >
           <div className='sidebar control-box'>
             <img src={thumbnail} className='w-100 rounded-2 ' />
