@@ -20,7 +20,14 @@ body {
   .auth__header {
     color: #313bac;
   }
-  
+  .navbar-toggler{
+    background-color:  #313bac !important;
+    box-shadow: 0 0 10px #313337;
+    &:hover{
+    box-shadow: none
+
+    }
+  }
   #dark .card {
     background-color: $bg-dark !important;
     color: #aaa !important;
@@ -106,7 +113,10 @@ body {
 }
 
 #dark {
-  
+  .navbar-brand {
+    color: white !important;
+    font-weight: 400;
+  }
 }
    
 
