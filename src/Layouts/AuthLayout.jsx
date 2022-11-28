@@ -22,7 +22,7 @@ function AuthLayout() {
             <Outlet></Outlet>
           </Col>
         </Row>
-        
+
       </Container>
       <Component.DetectOffline/>
     </>

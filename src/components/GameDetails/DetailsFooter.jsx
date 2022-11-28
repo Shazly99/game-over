@@ -4,11 +4,11 @@ function DetailsFooter({ game }) {
     let { title, developer, release_date, publisher, platform, genre } = game;
     let data = [
         { title: "Title", dec: `${title}` },
-        { title: "developer", dec: `${developer}` },
-        { title: "publisher", dec: `${publisher}` },
-        { title: "release_date", dec: `${release_date}` },
-        { title: "genre", dec: `${genre}` },
-        { title: "platform", dec: `${platform}` },
+        { title: "Developer", dec: `${developer}` },
+        { title: "Publisher", dec: `${publisher}` },
+        { title: "Release Date", dec: `${release_date}` },
+        { title: "Genre", dec: `${genre}` },
+        { title: "Platform", dec: `${platform}` },
     ]
     return (
         <div class="row mb-3">

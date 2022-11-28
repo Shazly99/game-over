@@ -64,7 +64,7 @@ function App() {
 
   return (
     <>
-    
+    <Component.DetectOffline/>
       <Toaster
         position="top-center"
         reverseOrder={false}

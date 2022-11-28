@@ -9,7 +9,6 @@ function Categories() {
   let { category } = useParams();
 
   const [number, setNumber] = useState(20);
-
   let { game, loading } = useFetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`, number)
   
   const moreGame = () => setNumber(number + 20);
