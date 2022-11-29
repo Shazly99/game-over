@@ -1,3 +1,10 @@
+#light{
+    .notFound_page {
+    background: url(../../assets/Image/stars.png),
+radial-gradient(at 50% 35%, #358de6 0%, #358de6 20%, rgb(0, 0, 0) 100%);
+    }
+}
+
 .notFound_page {
     position: relative;
     display: flex;

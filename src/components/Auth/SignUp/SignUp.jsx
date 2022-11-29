@@ -15,7 +15,7 @@ function SignUp() {
 
   const userDataApi = async () => {
     if (userData) {
-      let { data } = await axios.post(`https://route-egypt-api.herokuapp.com/signup`, userData);
+      let { data } = await axios.post(`https://routeegypt.herokuapp.com/signup`, userData);
       if (data.message == 'success') {
         toast.success(data.message);
         navigate('/login');
