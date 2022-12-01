@@ -5,18 +5,18 @@ import Img from './assets/Img.js';
 import './Styles/App.scss';
 import Component from './constants/Component'
 import { Toaster } from 'react-hot-toast';
-import jwtDecode from 'jwt-decode'; 
+import jwtDecode from 'jwt-decode';
 import Switch from "react-switch";
 
 
-export const ThemeContext=createContext(null)
+export const ThemeContext = createContext(null)
 
 function App() {
 
   const [userData, setUserData] = useState(null);
   const [theme, setTheme] = useState("dark");
-  const toggleTheme=()=>{
-    setTheme((curr)=>(curr==='light'?'dark':'light'));
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
   }
   function userDecode() {
     let Incode = localStorage.getItem('token');
@@ -36,9 +36,7 @@ function App() {
     setUserData(null)
     return <Navigate to={'/login'} />
   }
-
-
-
+  
   const root = createBrowserRouter([
     {
       path: '/', element: <Component.Layouts LogOut={LogOut} />, children: [
@@ -52,15 +50,14 @@ function App() {
             { path: 'category/:category', element: <ProtectedRoutes><Component.Categories /></ProtectedRoutes> },
           ]
         },
-        {path:'/gameDetails/:id',element:<ProtectedRoutes><Component.GameDetails/></ProtectedRoutes>},
+        { path: '/gameDetails/:id', element: <ProtectedRoutes><Component.GameDetails /></ProtectedRoutes> },
         { path: '*', element: <Component.Error /> },
       ]
     },
     {
       path: '/', element: <Component.AurhLayout />, children: [
         { path: '/login', element: <Component.SignIn /> },
-        { path: '/register', element: <Component.SignUp /> },
-        { path: '*', element: <Component.Error /> },
+        { path: '/register', element: <Component.SignUp /> }, 
 
       ]
     }
@@ -68,30 +65,31 @@ function App() {
   ])
 
   return (
-    <ThemeContext.Provider value={{theme , toggleTheme}}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div id={theme} className='app'  >
 
-    <div id={theme} className='app'  >
-    <Component.DetectOffline/>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        toastOptions={{
-          duration: 3000,
-          style: {
-            fontFamily: ' Arial, Helvetica, sans-serif',
-            textTransform: 'capitalize',
-            zIndex: '9999',
-            background: '#fffg',
-            color: '#333',
-          },
-        }}
-        containerStyle={{
-          top: 60
-        }}
-      />
-      <RouterProvider router={root} />
-     
-    </div>
+        <Component.DetectOffline />
+
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 3000,
+            style: {
+              fontFamily: ' Arial, Helvetica, sans-serif',
+              textTransform: 'capitalize',
+              zIndex: '9999',
+              background: '#fffg',
+              color: '#333',
+            },
+          }}
+          containerStyle={{
+            top: 60
+          }}
+        />
+
+        <RouterProvider router={root} />
+      </div>
     </ThemeContext.Provider>
   );
 }
